@@ -1,0 +1,15 @@
+/* ==========================================================
+   RTL OVERRIDES - applied when <html dir="rtl"> (Arabic / Hebrew)
+   Most spacing uses logical properties, so little is needed here.
+   TODO: add an Arabic/Hebrew font in the <head> if needed.
+   ========================================================== */
+[dir="rtl"] body { font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', 'Noto Sans Hebrew', var(--font-body); text-align: right; }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5 { font-family: 'Noto Naskh Arabic', 'Noto Serif Hebrew', var(--font-heading); }
+[dir="rtl"] .bi-arrow-right::before { content: "\f12f"; }  /* flip arrow icons */
+[dir="rtl"] .bi-chevron-right::before { content: "\f284"; }
+[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3 { margin-right: 0 !important; }
+[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+[dir="rtl"] .text-md-start { text-align: right !important; }
+[dir="rtl"] .hero { background-position: left center; }
+[dir="rtl"] .progress-steps { flex-direction: row; }
+[dir="rtl"] .lightbox .lb-prev { inset-inline-start: auto; }

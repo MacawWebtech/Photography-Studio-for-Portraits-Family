@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Portal Login | Lumen Studio</title>
+  <meta name="description" content="Log in or create your free Lumen Studio client account to book sessions, view private proof galleries, choose favourite photos and order prints online.">
+  <!-- TODO: replace example.com with your real domain -->
+  <meta property="og:title" content="Client Portal Login | Lumen Studio">
+  <meta property="og:description" content="Log in or create your free Lumen Studio client account to book sessions, view private proof galleries, choose favourite photos and order prints online.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1761839258657-457dda39b5cc?auto=format&fit=crop&w=1200&h=630&q=70">
+  <meta name="theme-color" content="#14110f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/dark-mode.css" rel="stylesheet">
+  <link href="../assets/css/rtl.css" rel="stylesheet">
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem('dir');if(d)document.documentElement.setAttribute('dir',d);}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- HEADER -->
+  <header id="site-header" class="site-header">
+    <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="Lumen Studio, home"><img class="logo-img logo-on-light" src="../assets/logo/lumen-logo.png" alt="" width="900" height="592"><img class="logo-img logo-on-dark" src="../assets/logo/lumen-logo-light.png" alt="" width="900" height="592"></a>
+        <button class="navbar-toggler icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html"><span class="di-num">01</span><span><strong>Home 1</strong><small>Classic: gallery, packages, FAQ</small></span></a></li>
+                <li><a class="dropdown-item" href="index-2.html"><span class="di-num">02</span><span><strong>Home 2</strong><small>Editorial: team, stories, before/after</small></span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-actions d-flex align-items-center gap-2 py-2">
+            <button class="icon-btn" data-action="theme" type="button" aria-label="Switch dark or light mode"><i class="bi bi-moon-stars"></i></button>
+            <button class="icon-btn dir-btn" data-action="dir" type="button" aria-label="Switch text direction (left to right or right to left)"><span class="dir-label">RTL</span></button>
+            <a class="btn btn-outline-primary btn-login" href="login.html" aria-label="Client login" title="Client login"><i class="bi bi-person"></i><span class="btn-label">Client Login</span></a>
+            <a class="btn btn-accent" href="booking.html">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="section auth-section"><div class="container">
+      <div class="auth-card">
+        <div class="text-center mb-4"><div class="icon-circle mx-auto"><i class="bi bi-lock"></i></div><h2 class="h3">Client portal</h2><p class="text-muted mb-0">Log in to book sessions, view your proof gallery, pick favourites and order prints.</p></div>
+        <ul class="nav nav-tabs mb-4" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#t-login" type="button" role="tab">Log in</button></li><li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t-reg" type="button" role="tab">Create account</button></li></ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="t-login" role="tabpanel">
+            <!-- TODO: replace redirect with real authentication -->
+            <div class="auth-social-wrap">
+              <div class="social-auth">
+                <a class="btn btn-social" href="client-dashboard.html" data-provider="google"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span>Continue with Google</span></a>
+                <a class="btn btn-social" href="client-dashboard.html" data-provider="apple"><i class="bi bi-apple" aria-hidden="true"></i><span>Continue with Apple</span></a>
+              </div>
+              <div class="auth-divider"><span>or log in with email</span></div>
+              </div>
+            <form data-validate data-redirect="client-dashboard.html" novalidate>
+              <div class="mb-3"><label class="form-label" for="l-email">Email</label><input class="form-control" id="l-email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+              <div class="mb-3"><label class="form-label" for="l-pass">Password</label><div class="input-group"><input class="form-control" id="l-pass" type="password" required autocomplete="current-password"><button class="btn btn-outline-primary" type="button" data-toggle-pass="#l-pass" aria-label="Show password"><i class="bi bi-eye"></i></button></div></div>
+              <div class="d-flex justify-content-between mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="remember"><label class="form-check-label" for="remember">Remember me</label></div><a href="#t-forgot" data-bs-toggle="tab" data-bs-target="#t-forgot">Forgot password?</a></div>
+              <button class="btn btn-primary w-100" type="submit">Log in</button>
+              <p class="small text-muted text-center mt-3 mb-0">Demo: any valid email and password will open the dashboard.</p>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="t-reg" role="tabpanel">
+            <div class="auth-social-wrap">
+              <div class="social-auth">
+                <a class="btn btn-social" href="client-dashboard.html" data-provider="google"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span>Sign up with Google</span></a>
+                <a class="btn btn-social" href="client-dashboard.html" data-provider="apple"><i class="bi bi-apple" aria-hidden="true"></i><span>Sign up with Apple</span></a>
+              </div>
+              <div class="auth-divider"><span>or sign up with email</span></div>
+              </div>
+            <form data-validate data-redirect="client-dashboard.html" novalidate>
+              <div class="mb-3"><label class="form-label" for="r-name">Full name</label><input class="form-control" id="r-name" required autocomplete="name"></div>
+              <div class="mb-3"><label class="form-label" for="r-email">Email</label><input class="form-control" id="r-email" type="email" required autocomplete="email"></div>
+              <div class="mb-3"><label class="form-label" for="r-pass">Password</label><div class="input-group"><input class="form-control" id="r-pass" type="password" required data-strength="1" autocomplete="new-password" aria-describedby="r-hint"><button class="btn btn-outline-primary" type="button" data-toggle-pass="#r-pass" aria-label="Show password"><i class="bi bi-eye"></i></button></div><div id="r-hint" class="form-text">At least 8 characters, with letters and numbers.</div></div>
+              <div class="mb-3"><label class="form-label" for="r-pass2">Confirm password</label><input class="form-control" id="r-pass2" type="password" required data-match="#r-pass" autocomplete="new-password"></div>
+              <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="r-terms" required><label class="form-check-label" for="r-terms">I agree to the terms and privacy policy</label></div>
+              <button class="btn btn-primary w-100" type="submit">Create account</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="t-forgot" role="tabpanel">
+            <p>Enter your email and we will send you a link to reset your password.</p>
+            <form data-validate data-success="Reset link sent. Please check your email." novalidate>
+              <div class="mb-3"><label class="form-label" for="f-email">Email</label><input class="form-control" id="f-email" type="email" required></div>
+              <button class="btn btn-primary w-100" type="submit">Send reset link</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div></section>
+  </main>
+  <!-- FOOTER -->
+  <footer id="site-footer" class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="footer-brand" href="index.html" aria-label="Lumen Studio, home"><img class="logo-img logo-always-light" src="../assets/logo/lumen-logo-light.png" alt="" width="900" height="592"></a>
+        <div class="footer-top-actions">
+          <a class="btn btn-footer-solid" href="booking.html">Book a Session <i class="bi bi-arrow-up-right"></i></a>
+          <a class="btn btn-footer-line" href="login.html"><i class="bi bi-person"></i> Client Login</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="fg-about">
+          <p>Natural, warm portraits for individuals, families and growing families. Memories you will love to look at for years.</p>
+          <div class="social" aria-label="Social media">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Session types">
+          <h5>Sessions</h5>
+          <ul>
+            <li><a href="service-details.html?type=portrait">Portrait</a></li>
+            <li><a href="service-details.html?type=family">Family</a></li>
+            <li><a href="service-details.html?type=maternity">Maternity</a></li>
+            <li><a href="booking.html">Book online</a></li>
+            <li><a href="login.html">Client portal</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h5>Visit us</h5>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i><address class="mb-0">24 Willow Lane, Your City, ST 00000</address></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:+15550142290">+1 (555) 014-2290</a></li>
+            <li><i class="bi bi-envelope"></i><a href="mailto:hello@lumenstudio.example">hello@lumenstudio.example</a></li>
+            <li><i class="bi bi-clock"></i><span>Tue-Sat 10:00-18:00 | Sun by appointment</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Lumen Studio. All rights reserved.</span>
+        <span><a href="404.html">Privacy</a> &middot; <a href="404.html">Terms</a></span>
+        <a class="to-top" href="#main">Back to top <i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

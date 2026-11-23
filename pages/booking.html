@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Photo Session | Lumen Studio</title>
+  <meta name="description" content="Book your portrait, family or maternity photo session in five simple steps. Choose a session, pick a package, select a date and confirm your details online.">
+  <!-- TODO: replace example.com with your real domain -->
+  <meta property="og:title" content="Book a Photo Session | Lumen Studio">
+  <meta property="og:description" content="Book your portrait, family or maternity photo session in five simple steps. Choose a session, pick a package, select a date and confirm your details online.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1761839258657-457dda39b5cc?auto=format&fit=crop&w=1200&h=630&q=70">
+  <meta name="theme-color" content="#14110f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/dark-mode.css" rel="stylesheet">
+  <link href="../assets/css/rtl.css" rel="stylesheet">
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem('dir');if(d)document.documentElement.setAttribute('dir',d);}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- HEADER -->
+  <header id="site-header" class="site-header">
+    <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="Lumen Studio, home"><img class="logo-img logo-on-light" src="../assets/logo/lumen-logo.png" alt="" width="900" height="592"><img class="logo-img logo-on-dark" src="../assets/logo/lumen-logo-light.png" alt="" width="900" height="592"></a>
+        <button class="navbar-toggler icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html"><span class="di-num">01</span><span><strong>Home 1</strong><small>Classic: gallery, packages, FAQ</small></span></a></li>
+                <li><a class="dropdown-item" href="index-2.html"><span class="di-num">02</span><span><strong>Home 2</strong><small>Editorial: team, stories, before/after</small></span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-actions d-flex align-items-center gap-2 py-2">
+            <button class="icon-btn" data-action="theme" type="button" aria-label="Switch dark or light mode"><i class="bi bi-moon-stars"></i></button>
+            <button class="icon-btn dir-btn" data-action="dir" type="button" aria-label="Switch text direction (left to right or right to left)"><span class="dir-label">RTL</span></button>
+            <a class="btn btn-outline-primary btn-login" href="login.html" aria-label="Client login" title="Client login"><i class="bi bi-person"></i><span class="btn-label">Client Login</span></a>
+            <a class="btn btn-accent" href="booking.html">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <!-- PAGE TITLE -->
+    <section class="page-hero" style="--hero-img:url('https://images.unsplash.com/photo-1763106377335-578cf40ce82e?auto=format&fit=crop&w=1900&q=70')">
+      <div class="container">
+        <h1>Book a session</h1>
+        <p class="lead mb-3">Five simple steps. It takes about two minutes.</p>
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">Booking</li></ol></nav>
+      </div>
+    </section>
+    <section class="section"><div class="container"><div class="row g-5">
+      <div class="col-lg-8" id="booking-wizard">
+        <ol class="progress-steps list-unstyled" aria-label="Booking progress"><li class="ps"><div class="dot">1</div>Session</li><li class="ps"><div class="dot">2</div>Package</li><li class="ps"><div class="dot">3</div>Date</li><li class="ps"><div class="dot">4</div>Details</li><li class="ps"><div class="dot">5</div>Confirm</li></ol>
+        <h2 id="wiz-title" tabindex="-1" class="h4 visually-hidden">Booking steps</h2>
+        <div class="wiz-step"><h3 class="h4 mb-3">1. What kind of session?</h3><div class="row g-3"><div class="col-md-4"><label class="choice h-100"><input class="form-check-input me-2" type="radio" name="type" value="portrait" data-label="Portrait"> <strong>Portrait</strong><span class="d-block small text-muted">45 min</span></label></div><div class="col-md-4"><label class="choice h-100"><input class="form-check-input me-2" type="radio" name="type" value="family" data-label="Family"> <strong>Family</strong><span class="d-block small text-muted">60 min</span></label></div><div class="col-md-4"><label class="choice h-100"><input class="form-check-input me-2" type="radio" name="type" value="maternity" data-label="Maternity"> <strong>Maternity</strong><span class="d-block small text-muted">60 min</span></label></div></div><p class="step-error text-danger mt-3" role="alert" hidden></p><div class="mt-4"><button class="btn btn-primary" data-next type="button">Next <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="wiz-step" hidden><h3 class="h4 mb-3">2. Choose a package</h3><div class="row g-3"><div class="col-md-4"><label class="choice h-100"><input class="form-check-input me-2" type="radio" name="pack" value="essential" data-label="Essential"> <strong>Essential</strong><span class="d-block small text-muted">10 photos</span></label></div><div class="col-md-4"><label class="choice h-100"><input class="form-check-input me-2" type="radio" name="pack" value="signature" data-label="Signature"> <strong>Signature</strong><span class="d-block small text-muted">25 photos</span></label></div><div class="col-md-4"><label class="choice h-100"><input class="form-check-input me-2" type="radio" name="pack" value="premium" data-label="Premium"> <strong>Premium</strong><span class="d-block small text-muted">50 photos + album</span></label></div></div><p class="step-error text-danger mt-3" role="alert" hidden></p><div class="mt-4 d-flex gap-2"><button class="btn btn-outline-primary" data-prev type="button">Back</button><button class="btn btn-primary" data-next type="button">Next <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="wiz-step" hidden><h3 class="h4 mb-3">3. Pick a date and time</h3>
+          <!-- TODO: embed Calendly / Cal.com / Google Calendar here -->
+          <div id="calendar-placeholder" class="mb-3 small text-muted">Calendar integration point: replace this block with your booking calendar embed.</div>
+          <div class="row g-3"><div class="col-sm-6"><label class="form-label" for="b-date">Date</label><input class="form-control" type="date" id="b-date"></div><div class="col-sm-6"><label class="form-label" for="b-time">Time</label><select class="form-select" id="b-time"><option value="">Choose a time</option><option>10:00</option><option>11:00</option><option>12:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option></select></div></div>
+          <p class="step-error text-danger mt-3" role="alert" hidden></p><div class="mt-4 d-flex gap-2"><button class="btn btn-outline-primary" data-prev type="button">Back</button><button class="btn btn-primary" data-next type="button">Next <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="wiz-step" hidden><h3 class="h4 mb-3">4. Your details</h3>
+          <form id="details-form" data-validate class="row g-3" novalidate>
+            <div class="col-sm-6"><label class="form-label" for="d-name">Full name</label><input class="form-control" id="d-name" required autocomplete="name"></div>
+            <div class="col-sm-6"><label class="form-label" for="d-email">Email</label><input class="form-control" id="d-email" type="email" required autocomplete="email"></div>
+            <div class="col-sm-6"><label class="form-label" for="d-phone">Phone</label><input class="form-control" id="d-phone" type="tel" required autocomplete="tel"></div>
+            <div class="col-sm-6"><label class="form-label" for="d-people">How many people?</label><select class="form-select" id="d-people"><option>1-2</option><option>3-4</option><option>5+</option></select></div>
+            <div class="col-12"><label class="form-label" for="d-notes">Anything we should know? (optional)</label><textarea class="form-control" id="d-notes" rows="3" placeholder="e.g. a toddler who loves bubbles"></textarea></div>
+          </form>
+          <p class="step-error text-danger mt-3" role="alert" hidden></p><div class="mt-4 d-flex gap-2"><button class="btn btn-outline-primary" data-prev type="button">Back</button><button class="btn btn-primary" data-next type="button">Next <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="wiz-step" hidden><div class="text-center py-4" role="status"><div class="icon-circle mx-auto" style="background:#dff3e6;color:#1d5a37"><i class="bi bi-check-lg"></i></div><h3 class="h3">You are all set!</h3><p>We sent a confirmation to your email. You can manage this booking any time from your client dashboard.</p><a class="btn btn-primary" href="login.html">Go to client portal</a> <a class="btn btn-outline-primary" href="index.html">Back to home</a></div></div>
+        <!-- final submit: TODO send booking data to your backend / Formspree here -->
+      </div>
+      <aside class="col-lg-4"><div class="panel-box" style="position:sticky;top:100px"><h2 class="h5">Your booking</h2><dl class="mb-0"><dt>Session</dt><dd id="sum-type">Not chosen yet</dd><dt>Package</dt><dd id="sum-pack">Not chosen yet</dd><dt>When</dt><dd id="sum-when">Not chosen yet</dd></dl><hr><p class="small text-muted mb-0"><i class="bi bi-shield-check"></i> Free rescheduling up to 48 hours before.</p></div></aside>
+    </div></div></section>
+  </main>
+  <!-- FOOTER -->
+  <footer id="site-footer" class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="footer-brand" href="index.html" aria-label="Lumen Studio, home"><img class="logo-img logo-always-light" src="../assets/logo/lumen-logo-light.png" alt="" width="900" height="592"></a>
+        <div class="footer-top-actions">
+          <a class="btn btn-footer-solid" href="booking.html">Book a Session <i class="bi bi-arrow-up-right"></i></a>
+          <a class="btn btn-footer-line" href="login.html"><i class="bi bi-person"></i> Client Login</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="fg-about">
+          <p>Natural, warm portraits for individuals, families and growing families. Memories you will love to look at for years.</p>
+          <div class="social" aria-label="Social media">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Session types">
+          <h5>Sessions</h5>
+          <ul>
+            <li><a href="service-details.html?type=portrait">Portrait</a></li>
+            <li><a href="service-details.html?type=family">Family</a></li>
+            <li><a href="service-details.html?type=maternity">Maternity</a></li>
+            <li><a href="booking.html">Book online</a></li>
+            <li><a href="login.html">Client portal</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h5>Visit us</h5>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i><address class="mb-0">24 Willow Lane, Your City, ST 00000</address></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:+15550142290">+1 (555) 014-2290</a></li>
+            <li><i class="bi bi-envelope"></i><a href="mailto:hello@lumenstudio.example">hello@lumenstudio.example</a></li>
+            <li><i class="bi bi-clock"></i><span>Tue-Sat 10:00-18:00 | Sun by appointment</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Lumen Studio. All rights reserved.</span>
+        <span><a href="404.html">Privacy</a> &middot; <a href="404.html">Terms</a></span>
+        <a class="to-top" href="#main">Back to top <i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

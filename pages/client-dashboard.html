@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Dashboard | Lumen Studio</title>
+  <meta name="description" content="Your private Lumen Studio client dashboard: manage bookings, view proof galleries, choose favourite photos, order prints and message your photographer.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/dark-mode.css" rel="stylesheet">
+  <link href="../assets/css/rtl.css" rel="stylesheet">
+  <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem('dir');if(d)document.documentElement.setAttribute('dir',d);}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#dash-main">Skip to main content</a>
+  <div class="dash">
+    <!-- SIDEBAR -->
+    <aside class="dash-side" id="dash-side" aria-label="Dashboard menu">
+      <a class="brand" href="index.html" aria-label="Lumen Studio, home"><img class="logo-img logo-always-light" src="../assets/logo/lumen-logo-light.png" alt="" width="900" height="592"></a>
+      <nav>
+        <p class="nav-group">Workspace</p>
+        <button class="nav-item-d" data-panel="overview"><i class="bi bi-grid"></i> Overview</button>
+        <button class="nav-item-d" data-panel="bookings"><i class="bi bi-calendar-event"></i> My Bookings</button>
+        <button class="nav-item-d" data-panel="galleries"><i class="bi bi-images"></i> Proof Galleries</button>
+        <button class="nav-item-d" data-panel="favorites"><i class="bi bi-heart"></i> Favorites</button>
+        <p class="nav-group">Prints</p>
+        <button class="nav-item-d" data-panel="orders"><i class="bi bi-printer"></i> Order Prints</button>
+        <button class="nav-item-d" data-panel="history"><i class="bi bi-receipt"></i> Order History</button>
+        <p class="nav-group">Account</p>
+        <button class="nav-item-d" data-panel="messages"><i class="bi bi-chat-dots"></i> Messages</button>
+        <button class="nav-item-d" data-panel="settings"><i class="bi bi-gear"></i> Profile &amp; Settings</button>
+      </nav>
+      <div class="side-user">
+        <span class="side-avatar" aria-hidden="true">A</span>
+        <span class="side-user-text"><strong>Alex Morgan</strong><small>alex@example.com</small></span>
+        <button class="side-logout" id="logout" type="button" aria-label="Log out"><i class="bi bi-box-arrow-right"></i></button>
+      </div>
+    </aside>
+
+    <div class="dash-main" id="dash-main">
+      <h1 class="visually-hidden">Client dashboard</h1>
+      <!-- TOP BAR -->
+      <div class="dash-top">
+        <div class="d-flex align-items-center gap-3">
+          <button class="icon-btn d-lg-none" id="side-toggle" type="button" aria-label="Open dashboard menu"><i class="bi bi-list"></i></button>
+          <div class="dash-welcome"><span id="dash-date"></span><strong><span id="dash-greet">Welcome back</span>, <span id="nav-name">Alex</span></strong></div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="icon-btn has-dot" type="button" aria-label="Notifications: 1 new" onclick="toast('You have 1 new notification: your proofs are ready.')"><i class="bi bi-bell"></i></button>
+          <button class="icon-btn" data-action="theme" type="button" aria-label="Switch dark or light mode"><i class="bi bi-moon-stars"></i></button>
+          <a class="btn btn-accent" href="booking.html">Book a Session</a>
+        </div>
+      </div>
+
+      <!-- LOADING SKELETON -->
+      <div class="skeleton-wrap" aria-hidden="true"><div class="skeleton mb-3"></div><div class="skeleton"></div></div>
+
+      <div id="dash-content" hidden>
+
+        <!-- OVERVIEW -->
+        <section class="dash-panel" id="p-overview">
+          <h2 class="h2 mb-4">Overview</h2>
+          <div class="row g-3 mb-3">
+            <div class="col-6 col-lg-3"><div class="stat"><span class="stat-icon"><i class="bi bi-calendar-check"></i></span><div class="num" id="stat-sessions">0</div><span class="stat-label">Sessions</span></div></div>
+            <div class="col-6 col-lg-3"><div class="stat"><span class="stat-icon"><i class="bi bi-images"></i></span><div class="num" id="stat-galleries">0</div><span class="stat-label">Galleries</span></div></div>
+            <div class="col-6 col-lg-3"><div class="stat"><span class="stat-icon"><i class="bi bi-heart"></i></span><div class="num" id="stat-favs">0</div><span class="stat-label">Favourites</span></div></div>
+            <div class="col-6 col-lg-3"><div class="stat"><span class="stat-icon"><i class="bi bi-bag"></i></span><div class="num" id="stat-orders">0</div><span class="stat-label">Orders</span></div></div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-lg-7"><div class="panel-box next-box h-100 mb-0"><h2 class="box-title">Your next session</h2><div id="next-session"></div></div></div>
+            <div class="col-lg-5"><div class="panel-box h-100 mb-0"><h2 class="box-title">Quick shortcuts</h2>
+              <div class="shortcut-list">
+                <button class="shortcut" data-panel="galleries"><span class="sc-ico"><i class="bi bi-images"></i></span><span class="sc-text"><strong>View my proof gallery</strong><small>Pick the photos you love</small></span><i class="bi bi-chevron-right sc-go"></i></button>
+                <button class="shortcut" data-panel="orders"><span class="sc-ico"><i class="bi bi-printer"></i></span><span class="sc-text"><strong>Order prints</strong><small>Prints, canvases and albums</small></span><i class="bi bi-chevron-right sc-go"></i></button>
+                <button class="shortcut" data-panel="messages"><span class="sc-ico"><i class="bi bi-chat-dots"></i></span><span class="sc-text"><strong>Message the studio</strong><small>We reply within one working day</small></span><i class="bi bi-chevron-right sc-go"></i></button>
+              </div></div></div>
+          </div>
+          <div class="row g-3">
+            <div class="col-lg-7"><div class="panel-box h-100 mb-0"><div class="box-head"><h2 class="box-title">Latest gallery</h2><button class="link-quiet" data-panel="galleries">Open galleries</button></div><div id="latest-gallery"></div></div></div>
+            <div class="col-lg-5"><div class="panel-box h-100 mb-0"><div class="box-head"><h2 class="box-title">Recent orders</h2><button class="link-quiet" data-panel="history">All orders</button></div><ul class="recent-list" id="recent-orders"></ul></div></div>
+          </div>
+        </section>
+
+        <!-- MY BOOKINGS -->
+        <section class="dash-panel" id="p-bookings">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2"><h2 class="h2 mb-0">My Bookings</h2><a class="btn btn-accent" href="booking.html">Book a new session</a></div>
+          <div class="panel-box"><div class="table-responsive"><table class="table align-middle table-responsive-stack mb-0"><caption class="visually-hidden">Your bookings</caption>
+            <thead><tr><th scope="col">Session</th><th scope="col">Date</th><th scope="col">Status</th><th scope="col">Actions</th></tr></thead><tbody id="bookings-body"></tbody></table></div></div>
+        </section>
+
+        <!-- PROOF GALLERIES -->
+        <section class="dash-panel" id="p-galleries">
+          <h2 class="h2 mb-3">Proof Galleries</h2>
+          <p class="text-muted">Tap the heart on photos you love. Your photographer will edit your favourites.</p>
+          <div class="row g-3" id="gallery-list"></div>
+          <div id="gallery-view" hidden>
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+              <div><button class="btn btn-outline-primary btn-sm me-2" id="gv-back" type="button"><i class="bi bi-arrow-left"></i> Back</button><strong id="gv-title"></strong></div>
+              <div class="d-flex align-items-center gap-3"><span class="fw-semibold" id="fav-counter" aria-live="polite">0 of 20 selected</span><button class="btn btn-primary" id="submit-favs" type="button">Submit selections</button></div>
+            </div>
+            <div class="proof-grid" id="gv-grid" data-lightbox-group></div>
+          </div>
+        </section>
+
+        <!-- FAVORITES -->
+        <section class="dash-panel" id="p-favorites">
+          <h2 class="h2 mb-3">Favorites</h2>
+          <div class="panel-box"><div class="proof-grid" id="fav-grid" data-lightbox-group></div></div>
+        </section>
+
+        <!-- ORDER PRINTS -->
+        <section class="dash-panel" id="p-orders">
+          <h2 class="h2 mb-3">Order Prints</h2>
+          <div class="row g-3">
+            <div class="col-lg-7"><div class="panel-box">
+              <h2 class="h5">1. Choose your photo and product</h2>
+              <div class="row g-3">
+                <div class="col-12"><label class="form-label" for="o-photo">Photo (from your favourites)</label><select class="form-select" id="o-photo"></select></div>
+                <div class="col-sm-4"><label class="form-label" for="o-product">Product</label><select class="form-select" id="o-product"><option value="print">Print</option><option value="canvas">Canvas</option><option value="album">Album</option></select></div>
+                <div class="col-sm-5"><label class="form-label" for="o-size">Size</label><select class="form-select" id="o-size"></select></div>
+                <div class="col-sm-3"><label class="form-label" for="o-qty">Quantity</label><input class="form-control" id="o-qty" type="number" min="1" max="20" value="1"></div>
+                <div class="col-12"><button class="btn btn-accent" id="add-cart" type="button"><i class="bi bi-cart-plus"></i> Add to cart</button></div>
+              </div></div></div>
+            <div class="col-lg-5"><div class="panel-box">
+              <h2 class="h5">2. Your cart</h2>
+              <ul class="list-unstyled mb-3" id="cart-list"></ul>
+              <div class="d-flex justify-content-between fw-bold mb-3"><span>Total</span><span id="cart-total">$0</span></div>
+              <!-- TODO: connect Stripe Checkout or PayPal Buttons here -->
+              <button class="btn btn-primary w-100 mb-2" id="checkout" type="button" disabled>Checkout</button>
+              <div class="small text-muted text-center">Payment buttons (Stripe / PayPal) are placeholders.</div>
+            </div></div>
+          </div>
+        </section>
+
+        <!-- ORDER HISTORY -->
+        <section class="dash-panel" id="p-history">
+          <h2 class="h2 mb-3">Order History</h2>
+          <div class="panel-box"><div class="table-responsive"><table class="table align-middle table-responsive-stack mb-0"><caption class="visually-hidden">Your past orders</caption>
+            <thead><tr><th scope="col">Order</th><th scope="col">Date</th><th scope="col">Items</th><th scope="col">Total</th><th scope="col">Status</th></tr></thead><tbody id="orders-body"></tbody></table></div></div>
+        </section>
+
+        <!-- MESSAGES -->
+        <section class="dash-panel" id="p-messages">
+          <h2 class="h2 mb-3">Messages</h2>
+          <div class="panel-box">
+            <div id="chat" style="height:340px;overflow:auto" aria-live="polite"></div>
+            <form id="chat-form" class="d-flex gap-2 mt-3"><label class="visually-hidden" for="chat-input">Type a message</label><input class="form-control" id="chat-input" placeholder="Type your message to the studio" autocomplete="off"><button class="btn btn-primary" type="submit">Send</button></form>
+          </div>
+        </section>
+
+        <!-- PROFILE & SETTINGS -->
+        <section class="dash-panel" id="p-settings">
+          <h2 class="h2 mb-3">Profile &amp; Settings</h2>
+          <form class="panel-box" id="settings-form">
+            <div class="row g-3">
+              <div class="col-sm-6"><label class="form-label" for="s-name">Full name</label><input class="form-control" id="s-name" value="Alex Morgan"></div>
+              <div class="col-sm-6"><label class="form-label" for="s-email">Email</label><input class="form-control" id="s-email" type="email" value="alex@example.com"></div>
+              <div class="col-sm-6"><label class="form-label" for="s-phone">Phone</label><input class="form-control" id="s-phone" type="tel" value="+1 555 123 4567"></div>
+              <div class="col-sm-6"><label class="form-label" for="s-pass">New password</label><input class="form-control" id="s-pass" type="password" autocomplete="new-password" placeholder="Leave blank to keep current"></div>
+              <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="n-email" checked><label class="form-check-label" for="n-email">Email me when new galleries are ready</label></div><div class="form-check"><input class="form-check-input" type="checkbox" id="n-order" checked><label class="form-check-label" for="n-order">Email me about my orders</label></div></div>
+              <div class="col-12"><button class="btn btn-primary" type="submit">Save changes</button></div>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
